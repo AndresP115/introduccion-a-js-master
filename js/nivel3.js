@@ -122,11 +122,13 @@
 
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
-//       Utilizá console.log para ver lo que obtuviste!
+//       Utilizá console.losg para ver lo que obtuviste!
 
 
-
-
+// const nuestroTitulo = document.querySelector('h1');
+// console.log(nuestroTitulo);
+// console.log(nuestroTitulo.innerText);
+// nuestroTitulo.innerText = 'Hola r/Argentina programa!'; 
 
 
 /*
@@ -146,7 +148,13 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
 
+for(let i = 0; i < mediaLinks.length; i++){
+    console.log(mediaLinks[i].innerText);
+    
+}
 
 
 
@@ -288,3 +296,22 @@
 // Levántate, estira las piernas y celebra tu logro.                      //
 // ¡Creo que esto amerita un festejo!                                     //
 ////////////////////////////////////////////////////////////////////////////
+
+
+const botonIngreso = document.querySelector('#ingresar');
+
+botonIngreso.onclick = function(){
+    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+    let textoResultado;
+
+    if(edadUsuario >= 18){
+        textoResultado = 'Puedes ingresar';
+    } else {
+        textoResultado = 'No puedes ingresar';
+    }
+
+    document.querySelector('#resultado').innerText = textoResultado;
+    return false;
+
+
+}
