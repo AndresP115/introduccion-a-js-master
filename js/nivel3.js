@@ -148,13 +148,13 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-const mediaLinks = document.querySelectorAll('li');
-console.log(mediaLinks);
+// const mediaLinks = document.querySelectorAll('li');
+// console.log(mediaLinks);
 
-for(let i = 0; i < mediaLinks.length; i++){
-    console.log(mediaLinks[i].innerText);
+// for(let i = 0; i < mediaLinks.length; i++){
+//     console.log(mediaLinks[i].innerText);
     
-}
+// }
 
 
 
@@ -287,7 +287,9 @@ for(let i = 0; i < mediaLinks.length; i++){
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
-
+const nodoImagen = document.createElement('img');
+nodoImagen.src = 'img/woman_bw.jpg';
+document.querySelector('header').appendChild(nodoImagen);
 
 
 
@@ -298,20 +300,20 @@ for(let i = 0; i < mediaLinks.length; i++){
 ////////////////////////////////////////////////////////////////////////////
 
 
-const botonIngreso = document.querySelector('#ingresar');
+// const botonIngreso = document.querySelector('#ingresar');
 
-botonIngreso.onclick = function(){
-    const edadUsuario = Number(document.querySelector('#edad-usuario').value);
-    let textoResultado;
+// botonIngreso.onclick = function(){
+//     const edadUsuario = Number(document.querySelector('#edad-usuario').value);
+//     let textoResultado;
 
-    if(edadUsuario >= 18){
-        textoResultado = 'Puedes ingresar';
-    } else {
-        textoResultado = 'No puedes ingresar';
-    }
+//     if(edadUsuario >= 18){
+//         textoResultado = 'Puedes ingresar';
+//     } else {
+//         textoResultado = 'No puedes ingresar';
+//     }
 
-    document.querySelector('#resultado').innerText = textoResultado;
-    return false;
+//     document.querySelector('#resultado').innerText = textoResultado;
+//     return false;
 
 
-}
+// }
